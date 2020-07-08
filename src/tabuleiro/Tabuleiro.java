@@ -35,7 +35,10 @@ public class Tabuleiro {
 		return pecas[posicao.getLinha()][posicao.getColuna()];
 	}
 	
-	
+	public void LugarDaPeca(Peca peca, Posicao posicao) {// vai ser informado qual peça e a posicao dela, vai receber por parametro
+		pecas[posicao.getLinha()][posicao.getColuna()] = peca; // lembrando "pecas" é a matriz de Peça
+		peca.posicao = posicao;
+	}
 	
 	
 }

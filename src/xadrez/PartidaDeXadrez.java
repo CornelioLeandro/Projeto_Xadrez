@@ -1,6 +1,9 @@
 package xadrez;
 
+import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
+import xadrez.pecas.Rei;
+import xadrez.pecas.Torre;
 
 public class PartidaDeXadrez {
 	
@@ -8,7 +11,7 @@ public class PartidaDeXadrez {
 	
 	public PartidaDeXadrez() {
 		tabuleiro = new Tabuleiro(8,8);// OBS Interessante: Setamos aqui o Tabuleiro 8,8 pois é o tamanho padrao de um tabuleiro de xadrez
-										// e também é a PartidaDeXadrez que tem que fica responsavel pelo tamanho do Tabuleiro;
+		iniciarPartida();   			// e também é a PartidaDeXadrez que tem que fica responsavel pelo tamanho do Tabuleiro;
 	}
 	
 	public PecaDeXadrez[][] getPecas(){// Feito um mat que é uma matriz de PecaDeXadrez que vai receber de tabuleiro a linha e a coluna
@@ -21,4 +24,8 @@ public class PartidaDeXadrez {
 		return mat;
 	}
 
+	private void iniciarPartida() {
+		tabuleiro.LugarDaPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(1,1));
+		tabuleiro.LugarDaPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(6,7));
+	}
 }

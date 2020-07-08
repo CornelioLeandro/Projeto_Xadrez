@@ -2,8 +2,8 @@ package tabuleiro;
 
 public class Peca {
 
-	protected Posicao posicao;
-	private Tabuleiro tabuleiro;
+	protected Posicao posicao; // uma peça vai ter posicao no tabuleiro.
+	private Tabuleiro tabuleiro;// o tabuleiro é a plataforma para a peca.
 	
 	public Peca(Tabuleiro tabuleiro) {
 		this.tabuleiro = tabuleiro;

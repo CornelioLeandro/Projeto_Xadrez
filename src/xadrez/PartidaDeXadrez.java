@@ -26,6 +26,6 @@ public class PartidaDeXadrez {
 
 	private void iniciarPartida() {
 		tabuleiro.LugarDaPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(1,1));
-		tabuleiro.LugarDaPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(6,7));
+		tabuleiro.LugarDaPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(7,7));
 	}
 }
